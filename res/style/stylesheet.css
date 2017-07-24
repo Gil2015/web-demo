@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  font-weight: lighter;
+}
+body { background-color: #fafafa; }
+ul,li {list-style: none;}
+
+
+/*============================
+  公共部分
+=============================*/
+/* Header */
+#Header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #fafafa;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  z-index: 50;
+}
+#Header h1 {
+  text-align: center;
+  line-height: 49px;
+  font-size: 20px;
+}
+
+/* Footer */
+#Footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 49px;
+  font-size: 18px;
+  z-index: 50;
+}
+#Footer i {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  border: 6px solid #333;
+  border-right-width: 3px;
+  border-left-width: 10px;
+  border-radius: 2px;
+  top: 4px;
+  margin-right: 10px;
+}
+#Footer i:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 14px dashed transparent;
+  border-bottom: 10px solid #333;
+  top: -28px;
+  left: -14px;
+}
+#Footer i:after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 8px;
+  top: -15px;
+  left: 6px;
+  background-color: #333;
+  border-radius: 1px;
+}
+#Con { padding: 50px 0; }
+
+/* 清除浮动 */
+.clear:after {
+  clear:both;
+  content:'.';
+  display:block;
+  width: 0;
+  height: 0;
+  visibility:hidden;
+}
+
+
+/*============================
+  首页
+=============================*/
+.mall-page .banner img {
+  display: block;
+  width: 100%;
+}
+.mall-page .lists {
+  padding: 25px 12px; 
+}
+.mall-page li {
+  float: left;
+  width: 48%;
+  min-height: 15px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+  margin-bottom: 18px;
+}
+.mall-page li:nth-of-type(2n+1) { margin-right: 4%; }
+.mall-page li img {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+.mall-page li h3 {
+  font-size: 14px;
+  padding-left: 12px;
+  line-height: 35px;
+  font-weight: normal;
+}
+.mall-page li p {
+  position: relative;
+  border-top: 1px solid #fafafa;
+  padding-left: 12px;
+  line-height: 30px;
+}
+.mall-page li p span {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  font-size: 12px;
+}
+
+
+/*============================
+  商品详情页
+=============================*/
+.detail-page { font-size: 14px; }
+.detail-page img {
+  display: block;
+  width: 100%;
+}
+.detail-page section {
+  padding: 20px 12px 12px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.detail-page .status {
+  position: relative;
+  color: tomato;
+  font-size: 18px;
+  margin-top: 12px;
+}
+.detail-page .status span {
+  position: absolute;
+  font-size: 12px;
+  color: darkgray;
+  top: 0;
+  right: 12px;
+}
+.detail-page .buy-box {
+  background-color: #fff;
+  margin: 20px 0;
+  border-top: 1px solid #f0f0f0;
+}
+.detail-page .row {
+  position: relative;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.detail-page .row div {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.detail-page .row .num-blk { top: 7px; }
+.detail-page .row i {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  line-height: 30px;
+  font-style: normal;
+  background-color: #ccc;
+}
+.detail-page .row span { margin: 0 8px; }
+.detail-page .buy-btn {
+  width: 94%;
+  height: 40px;
+  background-color: #ffe366;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+
+/*============================
+  购买成功页
+=============================*/
+.success-page i {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto 30px;
+  border: 3px solid mediumaquamarine;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.success-page i:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 55px;
+  height: 30px;
+  border-left: 3px solid mediumaquamarine;
+  border-bottom: 3px solid mediumaquamarine;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+.success-page p {
+  text-align: center;
+  font-size: 22px;
+}

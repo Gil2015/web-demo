@@ -1,0 +1,432 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF8">
+    <title>商城 接口文档</title>
+    <style type="text/css">
+        #container {
+            margin: 8px;
+        }
+
+        .param-table {
+            background: #E6E6E6;
+            border: 1px solid #FFF;
+            margin: 12px 0;
+            border-collapse: collapse;
+        }
+
+        .param-table th {
+            background: gray;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid #FFF;
+            padding: 5px;
+        }
+
+        .param-table td {
+            border-collapse: collapse;
+            border: 1px solid #FFF;
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .param-table .th-name {
+            min-width: 140px;
+        }
+
+        .param-table .th-identifier {
+            min-width: 140px;
+        }
+
+        .param-table .th-type {
+            min-width: 100px;
+        }
+
+        .param-table .th-remark {
+            min-width: 200px;
+        }
+
+        .param-table .td-name {}
+
+        .param-table .td-identifier {}
+
+        .param-table .td-type {
+            color: #990000;
+        }
+
+        .param-table .td-remark {
+            color: #666;
+        }
+
+        .param-table .tr-level-1 {
+            background: #F5F5F5;
+        }
+
+        .param-table .tr-level-1 .td-identifier {
+            padding-left: 5px;
+        }
+
+        .param-table .tr-level-2 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-2 .td-identifier {
+            padding-left: 15px;
+        }
+
+        .param-table .tr-level-3 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-3 .td-identifier {
+            padding-left: 25px;
+        }
+
+        .param-table .tr-level-4 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-4 .td-identifier {
+            padding-left: 35px;
+        }
+
+        .param-table .tr-level-5 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-5 .td-identifier {
+            padding-left: 45px;
+        }
+
+        .param-table .tr-level-6 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-6 .td-identifier {
+            padding-left: 55px;
+        }
+
+        .param-table .tr-level-7 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-7 .td-identifier {
+            padding-left: 65px;
+        }
+
+        .param-table .tr-level-8 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-8 .td-identifier {
+            padding-left: 75px;
+        }
+
+        .param-table .tr-level-9 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-9 .td-identifier {
+            padding-left: 85px;
+        }
+
+        .param-table .tr-level-10 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-10 .td-identifier {
+            padding-left: 95px;
+        }
+
+        .param-table .tr-level-11 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-11 .td-identifier {
+            padding-left: 105px;
+        }
+
+        .param-table .tr-level-12 {
+            background: #E6E6E6;
+        }
+
+        .param-table .tr-level-12 .td-identifier {
+            padding-left: 115px;
+        }
+
+        .param-table .tr-level-13 {
+            background: #CCCCCC;
+        }
+
+        .param-table .tr-level-13 .td-identifier {
+            padding-left: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="module">
+            <h1>妮妮商城 接口文档</h1>
+            <p>注：接口文档里的url根路径一般都省略的，如http://www.chenyanni.cn/api/mall/getLists，会直接写/api/mall/getLists</p>
+            <div class="page">
+                <h2>1.1&nbsp;商城首页</h2>
+                <div class="action">
+                    <h3>1.1.1&nbsp;商品列表</h3>
+
+                    <h3>请求地址URL</h3>
+                    <div>/api/mall/getLists</div>
+
+                    <h3>请求方法Method</h3>
+                    <div>GET</div>
+
+                    <h3>接口描述Description</h3>
+                    <div>获取商城首页狗狗列表数据</div>
+
+                    <h3>请求接口所需参数 Request Param List</h3>
+                    <div>无</div>
+
+                    <h3>接口返回数据参数 Response Param List</h3>
+                    <table class="param-table">
+                        <thead>
+                            <th class="th-name">参数名name</th>
+                            <th class="th-identifier">参数含义</th>
+                            <th class="th-type">参数类型Type</th>
+                        </thead>
+                        <tr class="tr-level-1">
+                            <td class="td-name">callStatus</td>
+                            <td class="td-identifier">接口请求状态</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">message</td>
+                            <td class="td-identifier">接口请求返回信息</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">data</td>
+                            <td class="td-identifier">数据</td>
+                            <td class="td-type">array</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---id</td>
+                            <td class="td-identifier">列表id</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---name</td>
+                            <td class="td-identifier">商品名</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---price</td>
+                            <td class="td-identifier">价格</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---buyNum</td>
+                            <td class="td-identifier">已卖数量</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---imgUrl</td>
+                            <td class="td-identifier">商品图片路径</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---dogNum</td>
+                            <td class="td-identifier">商品编号</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">currentPage</td>
+                            <td class="td-identifier">当前请求数据是第几页</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">numberPerPage</td>
+                            <td class="td-identifier">当前请求数据返回了几条</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">totalNumber</td>
+                            <td class="td-identifier">一共有多少条数据</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">totalPage</td>
+                            <td class="td-identifier">一共多少页</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <br/><br/><br/>
+            <div class="page">
+                <h2>2.1&nbsp;商品详情页</h2>
+                <div class="action">
+                    <h3>2.1.1&nbsp;获取物品详情</h3>
+
+                    <h3>请求地址URL</h3>
+                    <div>/api/detail/getDogDetail</div>
+
+                    <h3>请求方法Method</h3>
+                    <div>POST</div>
+
+                    <h3>接口描述Description</h3>
+                    <div>获取商品详细信息</div>
+
+                    <h3>请求接口所需参数 Request Param List</h3>
+                    <table class="param-table">
+                        <thead>
+                            <th class="th-name">参数名Name</th>
+                            <th class="th-identifier">参数含义</th>
+                            <th class="th-type">Type</th>
+                            <th class="th-remark">是否可以为空</th>
+                        </thead>
+                        <tr class="tr-level-1">
+                            <td class="td-name">dogNum</td>
+                            <td class="td-identifier">请求数据所需商品编号</td>
+                            <td class="td-type">number</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                    </table>
+
+                    <h3>接口返回数据参数 Response Param List</h3>
+                    <table class="param-table">
+                        <thead>
+                            <th class="th-name">参数名name</th>
+                            <th class="th-identifier">参数含义</th>
+                            <th class="th-type">参数类型Type</th>
+                        </thead>
+                        <tr class="tr-level-1">
+                            <td class="td-name">callStatus</td>
+                            <td class="td-identifier">接口请求状态</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">message</td>
+                            <td class="td-identifier">接口请求返回信息</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">data</td>
+                            <td class="td-identifier">数据</td>
+                            <td class="td-type">object</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---name</td>
+                            <td class="td-identifier">商品名</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---price</td>
+                            <td class="td-identifier">价格</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---buyNum</td>
+                            <td class="td-identifier">已卖数量</td>
+                            <td class="td-type">number</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---imgUrl</td>
+                            <td class="td-identifier">商品图片路径</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-2">
+                            <td class="td-name">---desciption</td>
+                            <td class="td-identifier">商品介绍</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br/><br/><br/>
+                <div class="action">
+                    <h3>2.1.2&nbsp;购买物品</h3>
+
+                    <h3>请求地址URL</h3>
+                    <div>/api/detail/buySuccess</div>
+
+                    <h3>请求方法Method</h3>
+                    <div>POST</div>
+
+                    <h3>接口描述Description</h3>
+                    <div>获取商城首页狗狗列表数据</div>
+
+                    <h3>请求接口所需参数 Request Param List</h3>
+                    <table class="param-table">
+                        <thead>
+                            <th class="th-name">参数名Name</th>
+                            <th class="th-identifier">参数含义</th>
+                            <th class="th-type">Type</th>
+                            <th class="th-remark">是否可以为空</th>
+                        </thead>
+                        <tr class="tr-level-1">
+                            <td class="td-name">dogNo</td>
+                            <td class="td-identifier">商品编号</td>
+                            <td class="td-type">number</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">price</td>
+                            <td class="td-identifier">购买单价</td>
+                            <td class="td-type">number</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">num</td>
+                            <td class="td-identifier">购买数量</td>
+                            <td class="td-type">number</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">address</td>
+                            <td class="td-identifier">购买人地址</td>
+                            <td class="td-type">string</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">userName</td>
+                            <td class="td-identifier">购买人</td>
+                            <td class="td-type">string</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">phone</td>
+                            <td class="td-identifier">购买人手机号</td>
+                            <td class="td-type">number</td>
+                            <td class="td-remark">否</td>
+                        </tr>
+                    </table>
+
+                    <h3>接口返回数据参数 Response Param List</h3>
+                    <table class="param-table">
+                        <thead>
+                            <th class="th-name">参数名name</th>
+                            <th class="th-identifier">参数含义</th>
+                            <th class="th-type">参数类型Type</th>
+                        </thead>
+                        <tr class="tr-level-1">
+                            <td class="td-name">callStatus</td>
+                            <td class="td-identifier">接口请求状态</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                        <tr class="tr-level-1">
+                            <td class="td-name">message</td>
+                            <td class="td-identifier">接口请求返回信息</td>
+                            <td class="td-type">string</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
