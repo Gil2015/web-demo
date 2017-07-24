@@ -11,7 +11,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '阿拉斯加',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/alasijia.jpeg',
+      imgUrl: 'res/img/alasijia.jpeg',
       dogNum: 20170520001
     },
     {
@@ -19,7 +19,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '边境牧羊犬',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/bianjing.jpeg',
+      imgUrl: 'res/img/bianjing.jpeg',
       dogNum: 20170520002
     },
     {
@@ -27,7 +27,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '比熊',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/bixiong.jpeg',
+      imgUrl: 'res/img/bixiong.jpeg',
       dogNum: 20170520003
     },
     {
@@ -35,7 +35,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '博美犬',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/bomei.jpeg',
+      imgUrl: 'res/img/bomei.jpeg',
       dogNum: 20170520004
     },
     {
@@ -43,7 +43,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '哈士奇',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/hashiqi.jpeg',
+      imgUrl: 'res/img/hashiqi.jpeg',
       dogNum: 20170520005
     },
     {
@@ -51,7 +51,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '金毛犬',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/jinmao.jpeg',
+      imgUrl: 'res/img/jinmao.jpeg',
       dogNum: 20170520006
     },
     {
@@ -59,7 +59,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '柯基犬',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/keji.jpeg',
+      imgUrl: 'res/img/keji.jpeg',
       dogNum: 20170520007
     },
     {
@@ -67,7 +67,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '秋田犬',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/qiutian.jpeg',
+      imgUrl: 'res/img/qiutian.jpeg',
       dogNum: 20170520008
     },
     {
@@ -75,7 +75,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '孙红雷',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/sunhonglei.jpeg',
+      imgUrl: 'res/img/sunhonglei.jpeg',
       dogNum: 20170520009
     },
     {
@@ -83,7 +83,7 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
       name: '雪纳瑞',
       'price|500-3000': 3000,
       'buyNum|1-2000': 2000,
-      imgUrl: './../res/img/xuenarui.jpeg',
+      imgUrl: 'res/img/xuenarui.jpeg',
       dogNum: 20170520010
     }
   ],
@@ -100,16 +100,16 @@ Mock.mock('http://www.chenyanni.cn/api/detail/getDogDetail', {
     'name|1': ['哈士奇','金毛','雪纳瑞','秋田犬','阿拉斯加','比熊','博美犬','柯基犬'],
     'description': '@cparagraph(3)',
     'imgUrl|1': [
-      './../res/img/alasijia.jpeg',
-      './../res/img/bianjing.jpeg',
-      './../res/img/bixiong.jpeg',
-      './../res/img/bomei.jpeg',
-      './../res/img/hashiqi.jpeg',
-      './../res/img/jinmao.jpeg',
-      './../res/img/keji.jpeg',
-      './../res/img/qiutian.jpeg',
-      './../res/img/sunhonglei.jpeg',
-      './../res/img/xuenarui.jpeg'
+      'res/img/alasijia.jpeg',
+      'res/img/bianjing.jpeg',
+      'res/img/bixiong.jpeg',
+      'res/img/bomei.jpeg',
+      'res/img/hashiqi.jpeg',
+      'res/img/jinmao.jpeg',
+      'res/img/keji.jpeg',
+      'res/img/qiutian.jpeg',
+      'res/img/sunhonglei.jpeg',
+      'res/img/xuenarui.jpeg'
     ],
     'price|500-3000': 3000,
     'buyNum|1-2000': 2000
