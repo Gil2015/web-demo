@@ -2,7 +2,7 @@
 一个轻量级的前后端分离移动端demo。<br>
 无前端自动化工具，框架，小巧。<br>
 有路由功能，包含ajax代码请求接口示例<br>
-demo适合前端新人学习，或用于移动端小型项目。中大型项目推荐vue,react,angular<br>
+demo适合前端新人学习，或用于移动端小型项目。<br>
 demo知识点: 前后端分离，参照接口文档使用ajax请求<br>
 `在线浏览demo`: [https://gil2015.github.io/web-demo/](https://gil2015.github.io/web-demo/)
 

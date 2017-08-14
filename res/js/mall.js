@@ -1,11 +1,14 @@
 var MallPage = {
+  renderFooter: function() {
+    $('#Footer').show();
+    $('#Footer a').eq(1).addClass('act');
+  },
   getMallLists: function() {
     $.ajax({
-      url: 'http://www.chenyanni.cn/api/mall/getLists',
+      url: Base.api + 'mall/getLists',
       type: 'GET',
       dataType: 'json',
       success: function(res) {
-        console.log(res);
         var data = res.data;
 
         // 将ajax请求到的数据 渲染出来
@@ -24,11 +27,11 @@ var MallPage = {
                     '</li>';
           $('.mall-page .lists').append(html);
         }
-
+        
         // 添加每个项的点击事件
         $('.mall-page .lists li').on('click', function() {
           var num = $(this).attr('data-id');
-          window.location.href = localeUrl + "/#detail?dogNum=" + num;
+          window.location.href = Base.localeUrl + "/#mall/detail?dogNum=" + num;
         });
       },
       error: function(err) {
@@ -40,4 +43,5 @@ var MallPage = {
 
 $(function() {
   MallPage.getMallLists();
+  MallPage.renderFooter();
 })

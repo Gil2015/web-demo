@@ -2,21 +2,23 @@
 var DetailPage = {
   dogNum: null,
   dogPrice: null,
+  renderFooter: function() {
+    $('#Footer').hide();
+  },
   // 定义获取商品详情函数
   getDetailData: function() {
     // 将self指向DetailPage对象
     var self = this;
-    // getUrlParam时app.js里给$添加的方法，这里拿来用
-    var num = $.getUrlParam('dogNum');  
+    // 获取地址栏中商品的ID
+    var num = Base.getUrlParam('dogNum');  
     $.ajax({
-      url: 'http://www.chenyanni.cn/api/detail/getDogDetail',
+      url: Base.api + 'detail/getDogDetail',
       type: 'POST',
       dataType: 'json',
       data: {
         dogNum: num       // 要传递给后台的参数
       },
       success: function(res) {
-        console.log(res);
         var data = res.data;
 
         // 把相应数据填充到页面里
@@ -36,9 +38,11 @@ var DetailPage = {
   },
   // 定义购买商品函数
   buy: function() {
+    // 购买前验证用户是否登录
+    Base.checkUserInfo();
     // 此请求的请求参数正常都是从页面里获取的，这里节省时间直接写死了
     $.ajax({
-      url: 'http://www.chenyanni.cn/api/detail/buySuccess',
+      url: Base.api + 'detail/buySuccess',
       type: 'POST',
       dataType: 'json',
       data: {
@@ -51,7 +55,7 @@ var DetailPage = {
       },
       success: function(res) {
         if (res.callStatus === 'SUCCEED') {
-          window.location.href = localeUrl + "/#success";
+          window.location.href = Base.localeUrl + "/#mall/success";
         } else {
           alert(res.message);
         }
@@ -89,4 +93,5 @@ var DetailPage = {
 
 $(function() {
   DetailPage.renderPage();
+  DetailPage.renderFooter();
 })

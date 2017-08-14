@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>商城</title>
+  <link rel="shortcut icon" type="image/x-icon" href="res/img/ico.ico">
+  <link rel="stylesheet" href="res/style/stylesheet.css">
+  <script type="text/javascript" src="res/vender/zepto-1.1.4.min.js"></script>
+  
+  <!-- 模拟后端接口，不需要可删除 mock.js和 api.js -->
+  <script type="text/javascript" src="res/vender/mock-min.js"></script>
+  <script type="text/javascript" src="res/vender/api.js"></script>
+</head>
+<body>
+  <div class="login-wraper">
+    <div class="blk">
+      <div class="logo">
+        Dog</br>Mall
+      </div>
+      <input class="user" type="text" placeholder="请输入用户名">
+      <input class="password" type="text" placeholder="请输入密码">
+      <div class="btn" onclick="login();">登 录</div>
+    </div>
+  </div>
+  <script>
+    function login() {
+      var userName = $('.user').val();
+      var pwd = $('.password').val();
+      if (!userName) {
+        alert('请输入用户名');
+        return;
+      } else if (!pwd) {
+        alert('请输入密码');
+        return;
+      }
+      $.ajax({
+        url: 'http://www.dogMall.com/api/login',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+          userName: userName,
+          password: pwd
+        },
+        success: function(res) {
+          if (res.callStatus === 'SUCCEED') {
+            var token = res.data.token;
+            sessionStorage.setItem('token', token);
+            var localeUrl = window.location.origin;
+            window.location.href = localeUrl + '/#mall';
+          }
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

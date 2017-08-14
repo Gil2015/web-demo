@@ -2,7 +2,8 @@
  * 模拟后台定义接口，需借助mock.js
  * 有兴趣的可以百度mock.js使用方法
  */
-Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
+// 获取首页商品列表接口
+Mock.mock('http://www.dogMall.com/api/mall/getLists', {
   callStatus: 'SUCCEED',
   message: '无异常',
   data: [
@@ -93,7 +94,34 @@ Mock.mock('http://www.chenyanni.cn/api/mall/getLists', {
   totalPage: 10
 });
 
-Mock.mock('http://www.chenyanni.cn/api/detail/getDogDetail', {
+// 订单接口
+Mock.mock('http://www.dogMall.com/api/getOrderLists', {
+  callStatus: 'SUCCEED',
+  message: '无异常',
+  'data|2-10': [{
+    'name|1': ['哈士奇','金毛','雪纳瑞','秋田犬','阿拉斯加','比熊','博美犬','柯基犬'],
+    'description': '@cparagraph(2)',
+    'imgUrl|1': [
+      'res/img/alasijia.jpeg',
+      'res/img/bianjing.jpeg',
+      'res/img/bixiong.jpeg',
+      'res/img/bomei.jpeg',
+      'res/img/hashiqi.jpeg',
+      'res/img/jinmao.jpeg',
+      'res/img/keji.jpeg',
+      'res/img/qiutian.jpeg',
+      'res/img/sunhonglei.jpeg',
+      'res/img/xuenarui.jpeg'
+    ],
+    'price|500-3000': 3000,
+    'buyNum|1-3': 3,
+    'buyDate': '@date(yyyy-MM-dd)',
+    'status|1': ['finish', 'send']
+  }],
+});
+
+// 商品详情接口
+Mock.mock('http://www.dogMall.com/api/detail/getDogDetail', {
   callStatus: 'SUCCEED',
   message: '无异常',
   data: {
@@ -116,12 +144,36 @@ Mock.mock('http://www.chenyanni.cn/api/detail/getDogDetail', {
   },
 });
 
-Mock.mock('http://www.chenyanni.cn/api/detail/buySuccess', {
+// 购买成功接口
+Mock.mock('http://www.dogMall.com/api/detail/buySuccess', {
   callStatus: 'SUCCEED',
   message: '无异常'
 });
 
-Mock.mock('http://www.chenyanni.cn/api/detail/buyFailed', {
+// 购买失败接口
+Mock.mock('http://www.dogMall.com/api/detail/buyFailed', {
   callStatus: 'FAILED',
   message: '该狗狗已卖完'
+});
+
+// 登陆接口
+Mock.mock('http://www.dogMall.com/api/login', {
+  callStatus: 'SUCCEED',
+  message: '无异常',
+  data: {
+    userName: '妮妮',
+    token: 'TDAKCBK134JKAS9KJ21309GS3M'
+  },
+});
+
+// 获取用户信息
+Mock.mock('http://www.dogMall.com/api/getUserInfo', {
+  callStatus: 'SUCCEED',
+  message: '无异常',
+  data: {
+    userName: '妮妮',
+    sexy: '女',
+    address: '上海市 浦东新区 陆家嘴街道 乳山路',
+    mobile: '13636XXXXXX1'
+  },
 });
